@@ -45,6 +45,8 @@ namespace ElevenNote.Web.Controllers
                 return View(model);
             }
 
+            TempData["SaveResult"] = "Your note was created";
+
             return RedirectToAction("Index");
         }
 
@@ -88,6 +90,8 @@ namespace ElevenNote.Web.Controllers
                 return View(model);
             }
 
+            TempData["SaveResult"] = "Your note was saved";
+
             return RedirectToAction("Index");
         }
 
@@ -104,6 +108,8 @@ namespace ElevenNote.Web.Controllers
         public ActionResult DeletePost(int id)
         {
             CreateNoteService().DeleteNote(id);
+
+            TempData["SaveResult"] = "Your note was deleted";
 
             return RedirectToAction("Index");
         }
