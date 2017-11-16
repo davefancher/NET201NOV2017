@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.ModifiedUtc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.NoteId }) |
             @Html.ActionLink("Details", "Details", new { id=item.NoteId }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Delete", "Delete", new { id=item.NoteId })
         </td>
     </tr>
 }
